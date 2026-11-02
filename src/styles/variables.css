@@ -1,0 +1,56 @@
+/*
+ * Design tokens. Every color comes from here, so a theme change is a
+ * one-file edit. `data-theme` on <html> is set before first paint by the
+ * inline script in app/layout.tsx. Tailwind exposes these as utilities via
+ * the @theme block in app/globals.css (bg-bg, text-muted, border-line…).
+ */
+:root,
+[data-theme='dark'] {
+  --bg: #0a0a0a;
+  --bg-2: #111111;
+  --fg: #fafafa;
+  --fg-2: #d4d4d4;
+  --muted: #a1a1a1;
+  --faint: #6b6b6b;
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --chip: #161616;
+  --hatch: rgba(255, 255, 255, 0.035);
+  --btn-bg: #fafafa;
+  --btn-fg: #0a0a0a;
+  /* GitHub contribution levels 0-4 */
+  --c0: #1a1a1a;
+  --c1: #3a3a3a;
+  --c2: #6b6b6b;
+  --c3: #a3a3a3;
+  --c4: #f5f5f5;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --bg: #ffffff;
+  --bg-2: #fafafa;
+  --fg: #0a0a0a;
+  --fg-2: #262626;
+  --muted: #737373;
+  --faint: #a3a3a3;
+  --line: rgba(0, 0, 0, 0.1);
+  --line-strong: rgba(0, 0, 0, 0.16);
+  --chip: #f5f5f5;
+  --hatch: rgba(0, 0, 0, 0.04);
+  --btn-bg: #0a0a0a;
+  --btn-fg: #fafafa;
+  --c0: #ededed;
+  --c1: #c7c7c7;
+  --c2: #8f8f8f;
+  --c3: #4d4d4d;
+  --c4: #0a0a0a;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  color-scheme: light;
+}
+
+:root {
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-dot: cubic-bezier(0.3, 0.8, 0.3, 1);
+}
