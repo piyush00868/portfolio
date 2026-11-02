@@ -1,0 +1,61 @@
+/*
+ * Custom Tailwind utilities for the dashed "blueprint" grid. These draw
+ * full-bleed lines that run 100vw past the 800px frame, which plain
+ * utility classes can't express, so they are defined once here.
+ */
+
+/* Full-bleed dashed lines above and below */
+@utility hl {
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: -100vw;
+    right: -100vw;
+    border-top: 1px dashed var(--line-strong);
+    pointer-events: none;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+}
+
+/* Only the top line */
+@utility hl-top {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    right: -100vw;
+    border-top: 1px dashed var(--line-strong);
+    pointer-events: none;
+  }
+}
+
+/* Only the bottom line */
+@utility hl-bottom {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100vw;
+    right: -100vw;
+    border-top: 1px dashed var(--line-strong);
+    pointer-events: none;
+  }
+}
+
+/* Diagonal hatch fill (section separators, blog placeholder) */
+@utility hatch {
+  background: repeating-linear-gradient(-45deg, var(--hatch) 0 1px, transparent 1px 7px);
+}
+@utility hatch-wide {
+  background: repeating-linear-gradient(-45deg, var(--hatch) 0 1px, transparent 1px 9px);
+}
