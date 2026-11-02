@@ -11,7 +11,8 @@ http.createServer(async (req, res) => {
     const shim = { setHeader: (k, v) => res.setHeader(k, v), status: (c) => ({ json: (b) => { res.writeHead(c, { 'content-type': 'application/json' }); res.end(JSON.stringify(b)); } }) };
     return handler(req, shim);
   }
-  const file = path.join(root, url === '/' ? 'index.html' : url);
+  let file = path.join(root, url === '/' ? 'index.html' : url);
+  if (!path.extname(file) && fs.existsSync(file + '.html')) file += '.html'; // clean URLs like /contact
   if (!file.startsWith(root) || !fs.existsSync(file)) { res.writeHead(404); return res.end('Not found'); }
   res.writeHead(200, { 'content-type': types[path.extname(file)] || 'application/octet-stream' });
   fs.createReadStream(file).pipe(res);
