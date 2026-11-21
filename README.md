@@ -104,7 +104,6 @@ src/
 │   │   ├── ProjectCardShell.tsx  (client) click/keyboard → open modal, reveal
 │   │   ├── ProjectDialogProvider.tsx  (client) which modal is open
 │   │   ├── ProjectModal.tsx      (client) native <dialog>
-│   │   ├── MoreProjectsCard.tsx
 │   │   └── covers/               Cover frame + illustrated mock-ups
 │   ├── contact/
 │   │   └── ContactForm.tsx       (client) validation, sending, success
@@ -189,7 +188,7 @@ Words in `{ strong: '…' }` render bold and underlined. SEO text is in the `sit
 }
 ```
 
-Put the screenshot in `public/assets/`. The cover gradients are `blue`, `green`, `orange` and `mono`.
+Put the screenshot in `public/assets/`. The cover gradients are `blue`, `green`, `orange`, `violet` and `mono`.
 
 **Technologies** → `src/data/tech-stack.ts`. Add `{ name, icon: { brand: 'docker' }, category: 'tools' }`. Brand logos live in `src/data/icons/brand-icons.ts`. If a logo is missing there, copy its path from [simpleicons.org](https://simpleicons.org) and add it.
 

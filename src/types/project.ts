@@ -16,7 +16,7 @@ export type ProjectCover =
   | { kind: 'terminal'; gradient: CoverGradient }
   | { kind: 'event-dashboard'; gradient: CoverGradient };
 
-export type CoverGradient = 'blue' | 'green' | 'orange' | 'mono';
+export type CoverGradient = 'blue' | 'green' | 'orange' | 'violet' | 'mono';
 
 export type ProjectStatus = 'live' | 'open-source';
 
@@ -40,14 +40,4 @@ export interface Project {
   /** Detailed bullet points for the modal. */
   highlights: readonly string[];
   links: readonly ProjectLink[];
-}
-
-/** The trailing "More on GitHub" tile in the projects grid. */
-export interface MoreProjectsCard {
-  href: string;
-  title: string;
-  handle: string;
-  tagline: string;
-  summary: string;
-  tags: readonly string[];
 }
