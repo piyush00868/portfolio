@@ -9,6 +9,7 @@ const gradientClass: Record<CoverGradient, string> = {
   blue: 'bg-[linear-gradient(135deg,#eff6ff_0%,#93c5fd_45%,#2563eb_100%)]',
   green: 'bg-[linear-gradient(135deg,#f0fdf4_0%,#86efac_40%,#059669_100%)]',
   orange: 'bg-[linear-gradient(135deg,#fff7ed_0%,#fdba74_40%,#f43f5e_100%)]',
+  violet: 'bg-[linear-gradient(135deg,#f5f3ff_0%,#c4b5fd_42%,#7c3aed_100%)]',
   mono: 'bg-[radial-gradient(120%_120%_at_100%_0%,#3f3f46_0%,#18181b_55%,#09090b_100%)]',
 };
 

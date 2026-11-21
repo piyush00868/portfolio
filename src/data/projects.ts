@@ -1,4 +1,7 @@
-import type { MoreProjectsCard, Project } from '@/types/project';
+import type { Project } from '@/types/project';
+
+/** Linked from the "View all" button next to the Projects heading. */
+export const allProjectsUrl = 'https://github.com/piyush00868?tab=repositories';
 
 /**
  * Projects, in display order. The card and its detail modal both render
@@ -125,13 +128,59 @@ export const projects: readonly Project[] = [
       },
     ],
   },
+  {
+    slug: 'agent-builder',
+    title: 'Agent Builder',
+    tagline: 'Visual builder for creating and testing AI agents.',
+    summary:
+      'Design an agent on a visual canvas, attach built-in or custom HTTP tools, start from templates and test it live in a streaming chat.',
+    modalSubtitle: 'Create, configure and test AI agents',
+    status: 'live',
+    cover: {
+      kind: 'screenshot',
+      gradient: 'violet',
+      image: '/assets/agent-builder.webp',
+      alt: 'Agent Builder template picker',
+    },
+    cardTags: ['Next.js', 'LangChain', 'PostgreSQL'],
+    tags: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'PostgreSQL',
+      'Prisma',
+      'Better Auth',
+      'LangChain',
+      'Groq',
+      'Zod',
+      'React Flow',
+      'Zustand',
+      'TanStack Query',
+      'Tailwind CSS',
+      'Tavily',
+    ],
+    highlights: [
+      'Built a web app for creating, configuring and testing AI agents on a visual Start → Agent → End workflow canvas, with saved agent definitions and canvas layouts.',
+      'Ships ready-made templates (weather, web research, travel, writing, coding and PR review) alongside blank agents with configurable instructions, model, memory and tool limits.',
+      'Implemented a tool registry with calculator, weather, web search, webpage extraction and GitHub tools, plus user-defined custom HTTP tools with parameters, headers and request bodies, validated with Zod.',
+      'Agent runs execute with LangChain and Groq and stream back to a Test Chat as server-sent events (text deltas, tool start/finish, completion), with conversations, messages and tool events stored in PostgreSQL via Prisma.',
+      "Added GitHub OAuth sign-in with Better Auth; GitHub tools act through the connected account's token. Canvas state lives in Zustand and client data fetching uses TanStack Query.",
+    ],
+    links: [
+      {
+        label: 'Live site',
+        href: 'https://agent-builder-kappa-gilt.vercel.app',
+        icon: 'globe',
+        onCard: true,
+        cardTitle: 'Live site',
+      },
+      {
+        label: 'GitHub',
+        href: 'https://github.com/piyush00868/agent-builder',
+        icon: 'github',
+        onCard: true,
+        cardTitle: 'GitHub repo',
+      },
+    ],
+  },
 ];
-
-export const moreProjects: MoreProjectsCard = {
-  href: 'https://github.com/piyush00868?tab=repositories',
-  title: 'More on GitHub',
-  handle: 'github.com/piyush00868',
-  tagline: 'Experiments, side projects and practice builds.',
-  summary: "The rest of what I'm building and learning lives on my GitHub. Have a dig around.",
-  tags: ['TypeScript', 'Python', 'JavaScript'],
-};
