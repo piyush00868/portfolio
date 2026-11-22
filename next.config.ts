@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     // The old static site exposed /resume and /contact.html; keep those links alive.
     return [
-      { source: '/resume', destination: '/resume(1).pdf', permanent: true },
+      { source: '/resume(1)', destination: '/resume(1).pdf', permanent: true },
       { source: '/contact.html', destination: '/contact', permanent: true },
       { source: '/index.html', destination: '/', permanent: true },
     ];
