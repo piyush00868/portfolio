@@ -57,13 +57,13 @@ export const site = {
   ogImage: '/assets/banner.webp',
 } as const satisfies SiteConfig;
 
-/** Sections linked from the navbar, in order. `mobile` links stay visible on small screens. */
+/** Sections linked from the navbar (and the mobile menu), in order. */
 export const navItems = [
-  { id: 'home', label: 'Home', mobile: true },
-  { id: 'projects', label: 'Projects', mobile: false },
-  { id: 'education', label: 'Education', mobile: false },
-  { id: 'stack', label: 'Stack', mobile: false },
-  { id: 'blog', label: 'Blog', mobile: true },
+  { id: 'home', label: 'Home' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'education', label: 'Education' },
+  { id: 'stack', label: 'Stack' },
+  { id: 'blog', label: 'Blog' },
 ] as const;
 
 export type NavSectionId = (typeof navItems)[number]['id'];
