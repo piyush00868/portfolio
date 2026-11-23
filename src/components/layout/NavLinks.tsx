@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { MobileMenu } from './MobileMenu';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { navItems, type NavSectionId } from '@/data/profile';
 import { useActiveSection } from '@/hooks/useActiveSection';
@@ -10,7 +11,8 @@ const sectionIds = navItems.map((item) => item.id);
 
 /**
  * Section links with a dot that follows the hovered link and returns to the
- * active section when the pointer leaves.
+ * active section when the pointer leaves. Below 721px the links collapse into
+ * the <MobileMenu> dropdown.
  */
 export function NavLinks() {
   const [active, setActive] = useActiveSection<NavSectionId>(sectionIds, 'home');
@@ -42,7 +44,7 @@ export function NavLinks() {
 
   return (
     <div
-      className="relative flex items-center gap-[22px] text-sm"
+      className="relative flex items-center gap-[22px] text-sm max-[720px]:gap-2"
       onMouseLeave={() => setHovered(null)}
     >
       {navItems.map((item) => (
@@ -56,7 +58,7 @@ export function NavLinks() {
           className={cn(
             'hover:text-fg relative transition-colors duration-200',
             active === item.id ? 'text-fg font-semibold' : 'text-muted',
-            !item.mobile && 'max-[720px]:hidden',
+            'max-[720px]:hidden',
           )}
           aria-current={active === item.id ? 'true' : undefined}
           onMouseEnter={() => setHovered(item.id)}
@@ -73,6 +75,7 @@ export function NavLinks() {
         aria-hidden
       />
       <ThemeToggle />
+      <MobileMenu items={navItems} active={active} onSelect={setActive} />
     </div>
   );
 }

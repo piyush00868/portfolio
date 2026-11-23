@@ -119,6 +119,14 @@ export function ClockIcon(props: IconProps) {
   );
 }
 
+export function MenuIcon(props: IconProps) {
+  return (
+    <svg {...stroke(2)} strokeLinejoin={undefined} {...props}>
+      <path d="M4 7h16M4 12h16M4 17h16" />
+    </svg>
+  );
+}
+
 export function CloseIcon(props: IconProps) {
   return (
     <svg {...stroke(2)} strokeLinejoin={undefined} {...props}>

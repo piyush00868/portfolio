@@ -29,7 +29,7 @@ I build full-stack applications and AI-powered products, with a focus on backend
 - **Projects.** Cards open a details modal. Both render from the same data entry.
 - **Tech stack.** Brand logos with category filters.
 - **GitHub activity.** The contribution heatmap is rendered on the server and cached for an hour, so it loads instantly.
-- **Navigation.** A sticky navbar whose dot follows the hovered link and tracks the section you're reading.
+- **Navigation.** A sticky navbar whose dot follows the hovered link and tracks the section you're reading. On phones (≤720px) the links collapse into a ☰ menu panel.
 - **Contact page.** A validated form with loading, error and success states, delivered by email through FormSubmit.
 - **Visitor counter**, scroll-reveal animations, a responsive layout, and SEO / Open Graph metadata.
 
@@ -89,6 +89,7 @@ src/
 │   │   ├── PageContainer.tsx     The 800px dashed-rail column
 │   │   ├── Navbar.tsx            Server shell
 │   │   ├── NavLinks.tsx          (client) active section + sliding dot + theme toggle
+│   │   ├── MobileMenu.tsx        (client) ☰ dropdown nav for screens ≤720px
 │   │   ├── Footer.tsx
 │   │   └── VisitorCounter.tsx    (client)
 │   ├── sections/                 One component per homepage section

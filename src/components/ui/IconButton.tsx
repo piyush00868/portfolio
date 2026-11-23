@@ -1,7 +1,7 @@
-import type { ButtonHTMLAttributes } from 'react';
+import type { ComponentProps } from 'react';
 import { cn } from '@/lib/utils';
 
-type IconButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type IconButtonProps = ComponentProps<'button'> & {
   /** Icon size: 18px by default, 17px for 'sm'. */
   size?: 'md' | 'sm';
 };
