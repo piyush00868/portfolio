@@ -27,7 +27,7 @@ export interface Profile {
   roles: readonly [string, ...string[]];
   timezone: { iana: string; label: string };
   about: readonly RichText[];
-  interests: readonly string[];
+  // interests: readonly string[];
   socials: readonly SocialLink[];
   quote: { text: string; author: string };
   banner: { src: string; alt: string };

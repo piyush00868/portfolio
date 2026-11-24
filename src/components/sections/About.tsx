@@ -18,7 +18,7 @@ export function About() {
             </li>
           ))}
         </ul>
-        <div className="mt-5 flex flex-wrap items-center gap-2">
+        {/* <div className="mt-5 flex flex-wrap items-center gap-2">
           <span className="text-faint mr-1 font-mono text-[11px]">( currently into )</span>
           {profile.interests.map((interest) => (
             <span
@@ -28,7 +28,7 @@ export function About() {
               {interest}
             </span>
           ))}
-        </div>
+        </div> */}
       </Reveal>
     </section>
   );

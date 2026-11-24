@@ -25,12 +25,11 @@ export const profile = {
       { strong: 'PostgreSQL' },
     ],
     [
-      'Currently in 2nd-year undergraduate at ',
+      'Currently second-year student at ',
       { strong: 'IIT Patna' },
-      ', studying Computer Science   & open to internships, freelance work and collaborations.',
+      'studying Computer Science, open to internships, freelance work and collaborations.',
     ],
   ],
-  interests: ['Backend engineering', 'Agentic AI', 'RAG', 'AI agents', 'System design'],
   socials: [
     { label: 'GitHub', href: 'https://github.com/piyush00868', icon: 'github' },
     {
