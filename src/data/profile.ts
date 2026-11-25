@@ -26,7 +26,7 @@ export const profile = {
     ],
     [
       'Currently second-year student at ',
-      { strong: 'IIT Patna' },
+      { strong: 'IIT Patna' }, 
       'studying Computer Science, open to internships, freelance work and collaborations.',
     ],
   ],
